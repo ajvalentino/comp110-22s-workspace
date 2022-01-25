@@ -40,5 +40,9 @@ if keyword[4] == char:
 
 if instances == 0:
     print("No instances of " + char + " found in " + keyword)
-else:
+
+if instances == 1:
+    print(str(instances) + " instance of " + char + " found in " + keyword)
+
+if instances > 1:
     print(str(instances) + " instances of " + char + " found in " + keyword)
