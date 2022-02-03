@@ -28,9 +28,11 @@ def emojified(guess: str, secret: str) -> str:
     """Changes guess to appropriate emojis depending on accuracy."""
     assert len(guess) == len(secret)
     
+    # Declares needed variables
     checks = 0
     emojis: str = ""
     
+    # Adds appropriate box
     while checks < len(secret):
         
         if guess[checks] == secret[checks]:
@@ -49,6 +51,7 @@ def input_guess(exp_length: int) -> str:
     """Asks for guess and determines if it is equal to the expected length."""
     guess: str = input(f"Enter a {exp_length} character word: ")
     
+    # Checks word length and prompts user for new word until they match
     while len(guess) != exp_length:
         guess = input(f"That was not {exp_length} letters! Try again: ")
     
@@ -60,6 +63,7 @@ def main() -> None:
     secret: str = "codes"
     turn: int = 1
     
+    # Goes through each of the 6 turns
     while turn <= 6:
         print(f"=== Turn {turn}/6 ===")
         
@@ -76,5 +80,6 @@ def main() -> None:
         turn += 1
 
 
+# Allows me to run the program from the module
 if __name__ == "__main__":
     main()
