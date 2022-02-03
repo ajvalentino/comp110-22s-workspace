@@ -1,4 +1,4 @@
-"""EX01 - One-Shot Wordle - Another cute step towards Wordle."""
+"""EX02 - One-Shot Wordle - Another cute step towards Wordle."""
 
 __author__ = "730466997"
 
