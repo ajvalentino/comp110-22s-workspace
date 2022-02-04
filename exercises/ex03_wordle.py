@@ -53,7 +53,7 @@ def input_guess(exp_length: int) -> str:
     
     # Checks word length and prompts user for new word until they match
     while len(guess) != exp_length:
-        guess = input(f"That was not {exp_length} letters! Try again: ")
+        guess = input(f"That wasn't {exp_length} chars! Try again: ")
     
     return guess
 
