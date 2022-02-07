@@ -12,10 +12,9 @@ def contains_char(secret: str, char: str) -> bool:
     """Checks if the given character is found in the secret word."""
     assert len(char) == 1
     
-    somewhere = False
     checks = 0
     
-    while not somewhere and checks < len(secret):
+    while checks < len(secret):
         if char == secret[checks]:
             return True
         else:
