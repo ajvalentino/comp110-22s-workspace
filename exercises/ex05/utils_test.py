@@ -46,3 +46,17 @@ def test_concat_empty() -> None:
     first_list: list[int] = []
     second_list: list[int] = []
     assert concat(first_list, second_list) == []
+
+
+def test_concat_small_numbers() -> None:
+    """Use case test that tests two lists with small numbers."""
+    first_list: list[int] = [1, 2, 3, 4]
+    second_list: list[int] = [5, 6, 7, 8]
+    assert concat(first_list, second_list) == [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+def test_concat_large_numbers() -> None:
+    """Use case test that tests two lists with large numbers."""
+    first_list: list[int] = [392, 856]
+    second_list: list[int] = [902, 234]
+    assert concat(first_list, second_list) == [392, 856, 902, 234]
