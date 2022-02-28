@@ -1,4 +1,4 @@
-"""Exercising the use of our newly learned topid - dicitonaries."""
+"""Exercising the use of our newly learned topic: dictionaries."""
 
 __author__ = "730466997"
 
