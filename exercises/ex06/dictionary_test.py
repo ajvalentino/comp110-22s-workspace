@@ -8,7 +8,7 @@ import pytest
 
 def test_invert_empty() -> None:
     """Edge case test that tests an empty dicitonary."""
-    dictionary = {}
+    dictionary: dict[str, str] = {}
     assert invert(dictionary) == {}
 
 
