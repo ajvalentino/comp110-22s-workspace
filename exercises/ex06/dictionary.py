@@ -20,20 +20,21 @@ def invert(dictionary: dict[str, str]) -> dict[str, str]:
 
 def favorite_color(dictionary: dict[str, str]) -> str:
     """Returns the most frequent color in a dictionary of names and favorite colors."""
-    # Declare counter, return variable, and list of colors
-    i: int = 0
-    favorite: str = ""
+    # Declare list of colors, frequency variable, and return variable
     colors: list[str] = []
+    favorite: str = ""
+    frequency: int = 0
 
-    # Create a list of the colors
+    # Create a list of the colors and use the count function to find counts
     for key in dictionary:
         colors.append(dictionary[key])
-    
-    # Compare the count of each value to each other
-    for color in colors:
-        if colors.count(color) > i:
-            i = colors.count(color)
-            favorite = color
+    counts: dict[str, int] = count(colors)
+
+    # Compare the count of each color and select the highest count
+    for key in counts:
+        if counts[key] > frequency:
+            favorite = key
+            frequency = counts[key]
 
     # Return most frequent color
     return favorite
